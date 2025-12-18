@@ -1,3 +1,7 @@
 [user]
 	name = "Chad Norvell"
 	email = "chadnorvell@pm.me"
+[core]
+	editor = nvim
+[push]
+	autoSetupRemote = yes
