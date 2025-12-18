@@ -1,0 +1,28 @@
+[DetailsMode]
+PreviewSize=32
+RightPadding=0
+
+[General]
+DoubleClickViewAction=none
+RememberOpenedTabs=false
+Version=202
+ViewPropsTimestamp=2025,12,4,15,8,25.199
+
+[IconsMode]
+PreviewSize=80
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=22
+
+[MainWindow]
+MenuBar=Disabled
+
+[Notification Messages]
+ConfirmRenameFileType=false
+
+[PreviewSettings]
+Plugins=appimagethumbnail,audiothumbnail,glycin-heif,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,heif,imagethumbnail,glycin-image-rs,jpegthumbnail,glycin-jxl,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,mltpreview,mobithumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,glycin-svg,svgthumbnail,ffmpegthumbs,exe-thumbnailer
+
+[VersionControl]
+enabledPlugins=Git
