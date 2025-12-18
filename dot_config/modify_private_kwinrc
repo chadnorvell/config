@@ -1,0 +1,8 @@
+#!/usr/bin/env chezmoi_modify_manager
+
+source auto
+
+ignore section "$Version"
+ignore regex "Desktops.*" "Id_.*"
+ignore regex "Tiling.*" ".*"
+ignore section "Xwayland"
