@@ -1,0 +1,68 @@
+{
+  "editor.fontFamily": "Iosevka",
+  "editor.fontSize": 16,
+  "editor.minimap.enabled": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "terminal.integrated.defaultProfile.linux": "fish",
+  "terminal.integrated.fontFamily": "Iosevka",
+  "terminal.integrated.fontSize": 16,
+  "vim.easymotion": true,
+  "vim.useSystemClipboard": true,
+  "window.commandCenter": true,
+  "[git-commit]": {
+    "editor.rulers": [
+      50,
+      72
+    ],
+    "editor.suggest.showWords": false
+  },
+  "[css]": {
+    "editor.tabSize": 2
+  },
+  "[elixir]": {
+    "editor.tabSize": 2
+  },
+  "[html]": {
+    "editor.tabSize": 2
+  },
+  "[javascript]": {
+    "editor.tabSize": 2
+  },
+  "[javascriptreact]": {
+    "editor.tabSize": 2
+  },
+  "[json]": {
+    "editor.tabSize": 2
+  },
+  "[jsonc]": {
+    "editor.tabSize": 2
+  },
+  "[ruby]": {
+    "editor.tabSize": 2
+  },
+  "[typescript]": {
+    "editor.tabSize": 2
+  },
+  "[typescriptreact]": {
+    "editor.tabSize": 2
+  },
+
+  {{- if (contains "Code" .chezmoi.targetFile) }}
+  "workbench.colorTheme": "Mariana Pro (Cool)",
+  {{- end }}
+  {{- if (contains "Cursor" .chezmoi.targetFile) }}
+  "workbench.colorTheme": "Gruvbox Dark Hard",
+  {{- end }}
+  {{- if (contains "Antigravity" .chezmoi.targetFile) }}
+  "antigravity.marketplaceGalleryItemURL": "https://marketplace.visualstudio.com/items",
+  "antigravity.marketplaceExtensionGalleryServiceURL": "https://marketplace.visualstudio.com/_apis/public/gallery",
+  "workbench.colorTheme": "One Dark Pro",
+  {{- end }}
+
+  "workbench.startupEditor": "none"
+}
