@@ -9,6 +9,12 @@
         "-y"
       ]
     },
+    "graphite": {
+      "command": "gt",
+      "args": [
+        "mcp"
+      ]
+    },
     "tidewave": {
       "serverUrl": "http://localhost:4000/tidewave/mcp"
     }

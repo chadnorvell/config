@@ -1,0 +1,22 @@
+{
+    "editor.fontFamily": "Iosevka",
+    "editor.fontSize": 16,
+    "editor.minimap.enabled": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "[git-commit]": {
+        "editor.rulers": [
+        50,
+        72
+        ],
+        "editor.suggest.showWords": false,
+    },
+    "terminal.integrated.defaultProfile.linux": "fish",
+    "terminal.integrated.fontFamily": "Iosevka",
+    "terminal.integrated.fontSize": 16,
+    "vim.easymotion": true,
+    "vim.useSystemClipboard": true, 
+
+    "window.commandCenter": true,
+    "workbench.colorTheme": "Gruvbox Dark Hard"
+}
