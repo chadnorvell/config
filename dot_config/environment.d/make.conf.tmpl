@@ -1,0 +1,9 @@
+{{ if eq .chezmoi.hostname "sunyata" }}
+MAKEFLAGS=-j24
+{{ else if eq .chezmoi.hostname "advaita" }}
+MAKEFLAGS=-j20
+{{ else if eq .chezmoi.hostname "mazama" }}
+MAKEFLAGS=-j20
+{{ else }}
+MAKEFLAGS=-j8
+{{ end }}
