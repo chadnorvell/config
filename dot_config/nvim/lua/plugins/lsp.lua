@@ -27,35 +27,47 @@ return {
 
             {
               "<leader>cd",
-              require("telescope.builtin").lsp_definitions,
+              function()
+                require("telescope.builtin").lsp_definitions()
+              end,
               desc = "code defs",
             },
             {
               "<leader>cf",
-              require("telescope.builtin").lsp_references,
+              function()
+                require("telescope.builtin").lsp_references()
+              end,
               desc = "refs",
             },
             {
               "<leader>ci",
-              require("telescope.builtin").lsp_implementations,
+              function()
+                require("telescope.builtin").lsp_implementations()
+              end,
               desc = "impls",
             },
 
             {
               "<leader>cp",
-              require("telescope.builtin").lsp_dynamic_workspace_symbols,
+              function()
+                require("telescope.builtin").lsp_dynamic_workspace_symbols()
+              end,
               desc = "symbols in project",
             },
 
             {
               "<leader>cs",
-              require("telescope.builtin").lsp_document_symbols,
+              function()
+                require("telescope.builtin").lsp_document_symbols()
+              end,
               desc = "symbols in doc",
             },
 
             {
               "<leader>ct",
-              require("telescope.builtin").lsp_type_definitions,
+              function()
+                require("telescope.builtin").lsp_type_definitions()
+              end,
               desc = "type defs",
             },
           })
@@ -65,8 +77,11 @@ return {
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
       local servers = {
-        clangd = {},
-        clojure_lsp = {},
+        clangd = {
+          capabilities = {
+            offsetEncoding = { "utf-16" },
+          },
+        },
         elixirls = {
           cmd = { "./.nix/elixir-ls" },
         },
@@ -95,6 +110,7 @@ return {
           end,
         },
         fish_lsp = {},
+        gopls = {},
         lua_ls = {},
         nil_ls = {},
         rust_analyzer = {},

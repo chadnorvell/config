@@ -1,3 +1,9 @@
+function _prompt_timestamp
+    if test -n "$TMUX"
+        string join '' -- (set_color brblack) (date '+%H:%M') (set_color normal) ' '
+    end
+end
+
 function _prompt_hostname
     if test -z "$TMUX" 
         string join '' -- (set_color -o bryellow) (prompt_hostname) (set_color normal) ' '
@@ -54,6 +60,7 @@ function fish_prompt
     end
 
     string join '' -- \
+        (_prompt_timestamp) \
         (_prompt_hostname) \
         (_prompt_pwd) \
         (_prompt_git) \
