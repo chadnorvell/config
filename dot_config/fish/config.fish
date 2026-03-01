@@ -5,6 +5,10 @@ end
 set -x EDITOR nvim
 set -x MAKEFLAGS "-j20"
 
+if test -e "$HOME/.deno/env.fish"
+    source "$HOME/.deno/env.fish"
+end
+
 if test -e "$HOME/.cargo/env.fish"
     source "$HOME/.cargo/env.fish"
 end
