@@ -2,35 +2,43 @@ if status is-interactive
     set fish_greeting
 end
 
-set -x EDITOR nvim
-set -x MAKEFLAGS "-j20"
-
-if test -e "$HOME/.deno/env.fish"
-    source "$HOME/.deno/env.fish"
+if test -d "$HOME/.nix-profile/share/man"
+    if not contains "$HOME/.nix-profile/share/man" $MANPATH
+        set -gx MANPATH "$HOME/.nix-profile/share/man" $MANPATH
+    end
 end
 
-if test -e "$HOME/.cargo/env.fish"
-    source "$HOME/.cargo/env.fish"
-end
+if not set -q IN_FISH_SUBSHELL
+    set -x EDITOR nvim
+    set -x MAKEFLAGS -j20
 
-set -x GOPATH "$HOME/.pkg/go"
-if test -d "$GOPATH/bin"
-    fish_add_path -Pm "$GOPATH/bin"
-end
+    if test -e "$HOME/.deno/env.fish"
+        source "$HOME/.deno/env.fish"
+    end
 
-set -x npm_config_prefix "$HOME/.pkg/npm"
-if test -d "$npm_config_prefix/bin"
-    fish_add_path -Pm "$npm_config_prefix/bin"
-end
+    if test -e "$HOME/.cargo/env.fish"
+        source "$HOME/.cargo/env.fish"
+    end
 
-set -x PIPX_HOME "$HOME/.pkg/pipx"
-set -x PIPX_BIN_DIR "$HOME/.pkg/pipx/bin"
-if test -d "$PIPX_BIN_DIR"
-    fish_add_path -Pm "$PIPX_BIN_DIR"
-end
+    set -x GOPATH "$HOME/.pkg/go"
+    if test -d "$GOPATH/bin"
+        fish_add_path -Pm "$GOPATH/bin"
+    end
 
-if test -d "$HOME/.local/bin"
-    fish_add_path -Pm "$HOME/.local/bin"
-end
+    set -x npm_config_prefix "$HOME/.pkg/npm"
+    if test -d "$npm_config_prefix/bin"
+        fish_add_path -Pm "$npm_config_prefix/bin"
+    end
 
-direnv hook fish | source
+    set -x PIPX_HOME "$HOME/.pkg/pipx"
+    set -x PIPX_BIN_DIR "$HOME/.pkg/pipx/bin"
+    if test -d "$PIPX_BIN_DIR"
+        fish_add_path -Pm "$PIPX_BIN_DIR"
+    end
+
+    if test -d "$HOME/.local/bin"
+        fish_add_path -Pm "$HOME/.local/bin"
+    end
+
+    direnv hook fish | source
+end
