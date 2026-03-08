@@ -1,6 +1,6 @@
 [Appearance]
 ColorScheme=Mariana
-Font=Iosevka Nerd Font Mono,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+Font=Iosevka Term Medium,12,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Regular
 
 [Cursor Options]
 CustomCursorColor=252,187,106
