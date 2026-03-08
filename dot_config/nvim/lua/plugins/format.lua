@@ -9,6 +9,7 @@ return {
     },
     formatters_by_ft = {
       lua = { "stylua" },
+      markdown = { "mdformat" },
       python = { "ruff" },
       rust = { "rustfmt" },
       sh = { "shfmt" },
