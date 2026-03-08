@@ -40,5 +40,7 @@ if not set -q IN_FISH_SUBSHELL
         fish_add_path -Pm "$HOME/.local/bin"
     end
 
-    direnv hook fish | source
+    if type -q direnv
+        direnv hook fish | source
+    end
 end

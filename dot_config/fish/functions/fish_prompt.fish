@@ -10,6 +10,12 @@ function _prompt_hostname
     end
 end
 
+function _prompt_distrobox_container
+    if test -n "$CONTAINER_ID"
+        string join '' -- (set_color brblack) "$CONTAINER_ID" (set_color normal) ' '
+    end
+end
+
 function _prompt_pwd
     string join '' -- (set_color -o brcyan) (prompt_pwd) (set_color normal) ' '
 end
@@ -62,6 +68,7 @@ function fish_prompt
     string join '' -- \
         (_prompt_timestamp) \
         (_prompt_hostname) \
+        (_prompt_distrobox_container) \
         (_prompt_pwd) \
         (_prompt_git) \
         $prompt_symbol
