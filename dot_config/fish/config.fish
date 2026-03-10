@@ -26,7 +26,8 @@ if not set -q IN_FISH_SUBSHELL
     end
 
     if test -d "$HOME/.bun/bin"
-        fish_add_path -Pm "$HOME/.bun/bin"
+        set -x BUN_INSTALL "$HOME/.bun"
+        fish_add_path -Pm "$BUN_INSTALL/bin"
     end
 
     set -x PIPX_HOME "$HOME/.pkg/pipx"
