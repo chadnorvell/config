@@ -1,1 +1,13 @@
 **/*.src.ini
+
+{{ if ne .chezmoi.os "linux" }}
+.config/environment.d
+.config/dolphinrc
+.config/kitty
+.config/kglobalshortcutsrc
+.config/konsolerc
+.config/kwinrc
+.config/user-dirs*
+.local/bin/lua-language-server
+.local/share/konsole
+{{ end }}

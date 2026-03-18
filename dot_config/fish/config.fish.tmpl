@@ -1,0 +1,8 @@
+if status is-interactive
+    set fish_greeting
+end
+{{ if eq .chezmoi.os "darwin" }}
+if test -e /opt/homebrew/bin/brew
+    /opt/homebrew/bin/brew shellenv fish | source
+end
+{{ end }}
