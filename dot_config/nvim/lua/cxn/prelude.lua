@@ -60,6 +60,26 @@ vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
 
 vim.filetype.add({ extension = { fidl = "fidl" } })
 
+-- TODO: This might be unnecessary in neovim 0.12
+vim.api.nvim_create_autocmd("FileType", {
+  callback = function(event)
+    -- Wrap vim.treesitter.start() in pcall to avoid errors if a parser is missing or broken
+    if pcall(vim.treesitter.start, event.buf) then
+      -- Enable Treesitter highlighting (default behavior of vim.treesitter.start())
+
+      -- Optional: Enable Treesitter folding
+      -- vim.wo[event.buf].foldmethod = "expr"
+      -- vim.wo[event.buf].foldexpr = "v:lua.vim.treesitter.foldexpr()"
+
+      -- Optional: Enable Treesitter indentation
+      vim.bo[event.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+    else
+      -- Fallback to default syntax highlighting if Treesitter can't start
+      vim.bo[event.buf].syntax = "on"
+    end
+  end,
+})
+
 -- Share the system clipboard
 -- Loaded async because otherwise it can increase startup time
 vim.schedule(function()

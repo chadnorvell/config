@@ -1,5 +1,6 @@
 return {
   "nvim-treesitter/nvim-treesitter",
+  lazy = false,
   build = ":TSUpdate",
   config = function()
     local configs = require("nvim-treesitter.config")
@@ -13,6 +14,7 @@ return {
         "css",
         "csv",
         "dockerfile",
+        "elixir",
         "fish",
         "html",
         "javascript",
