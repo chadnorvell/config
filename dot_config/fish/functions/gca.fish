@@ -1,3 +1,3 @@
-function gca --wraps='git commit --amend $argv'
-  git commit --amend $argv
+function gca --wraps 'git commit --amend' --description 'git commit --amend'
+    git commit --amend
 end

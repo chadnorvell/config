@@ -1,4 +1,3 @@
-function gr --wraps='git rebase $argv'
-  git rebase $argv
+function gr --wraps 'git rebase' --description 'git rebase'
+    git rebase $argv
 end
-

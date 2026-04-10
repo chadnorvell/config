@@ -53,3 +53,6 @@ vim.keymap.set("n", "<a-]>", ":tabn<cr>")
 -- Re-order tabs
 vim.keymap.set("n", "<a-{>", ":-tabmove<cr>")
 vim.keymap.set("n", "<a-}>", ":+tabmove<cr>")
+
+-- Clear highlighting
+vim.keymap.set("n", "<a-x>", vim.cmd.noh)

@@ -1,4 +1,3 @@
-function l --wraps='eza'
-  eza $argv
+function l --wraps 'eza' --description 'eza'
+    eza $argv
 end
-

@@ -1,4 +1,3 @@
-function gk --wraps='git checkout $argv'
-  git checkout $argv
+function gk --wraps 'git checkout' --description 'git checkout'
+    git checkout $argv
 end
-

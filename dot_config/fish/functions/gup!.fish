@@ -1,4 +1,3 @@
-function gup! --wraps='git push --force $argv'
-  git push --force $argv
+function gup! --wraps 'git push --force' --description 'git push --force'
+    git push --force $argv
 end
-

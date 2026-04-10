@@ -1,4 +1,3 @@
-function gwip --wraps='git add -A && git commit --no-verify -m \'~~WIP~~\''
-  git add -A && git commit --no-verify -m '~~WIP~~'
+function gwip --description 'git save changes as WIP commit'
+    git add -A && git commit --no-verify -m '~~WIP~~'
 end
-

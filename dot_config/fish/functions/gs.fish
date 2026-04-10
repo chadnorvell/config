@@ -1,4 +1,3 @@
-function gs --wraps='git status $argv'
-  git status $argv
+function gs --wraps 'git status' --description 'git status'
+    git status $argv
 end
-

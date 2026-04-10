@@ -1,4 +1,3 @@
-function gri --wraps='git rebase -i $argv'
-  git rebase -i $argv
+function gri --wraps 'git rebase -i' --description 'git rebase -i'
+    git rebase -i $argv
 end
-

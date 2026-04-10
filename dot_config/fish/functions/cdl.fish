@@ -1,4 +1,3 @@
-function cdl --wraps='cd $argv && eza --long'
-  cd $argv && eza --long
+function cdl --description 'cd && eza --long'
+    cd $argv && eza --long
 end
-

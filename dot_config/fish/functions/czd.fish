@@ -1,3 +1,3 @@
-function czd --wraps='chezmoi diff' --description 'alias czd chezmoi diff'
+function czd --wraps 'chezmoi diff' --description 'chezmoi diff'
     chezmoi diff $argv
 end

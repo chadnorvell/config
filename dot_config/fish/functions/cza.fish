@@ -1,3 +1,3 @@
-function cza --wraps='chezmoi add' --description 'alias cza chezmoi add'
+function cza --wraps 'chezmoi add' --description 'chezmoi add'
     chezmoi add $argv
 end

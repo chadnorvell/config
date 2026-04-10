@@ -1,4 +1,3 @@
-function gra --wraps='git rebase --abort $argv'
-  git rebase --abort $argv
+function gra --wraps 'git rebase --abort' --description 'git rebase --abort'
+    git rebase --abort $argv
 end
-

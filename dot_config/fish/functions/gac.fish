@@ -1,3 +1,3 @@
-function gac --wraps='git add -A && git commit'
-  git add -A && git commit $argv
+function gac --description 'git add -A && git commit'
+    git add -A && git commit
 end

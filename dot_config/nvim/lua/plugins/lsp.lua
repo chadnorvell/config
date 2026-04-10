@@ -113,6 +113,7 @@ return {
         gopls = {},
         lua_ls = {},
         nil_ls = {},
+        ruff = {},
         rust_analyzer = {},
         statix = {},
         svelte = {},
@@ -132,6 +133,7 @@ return {
           },
         },
         ts_ls = {},
+        ty = {},
       }
 
       for server_name, server_settings in pairs(servers) do

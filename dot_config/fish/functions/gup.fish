@@ -1,4 +1,3 @@
-function gup --wraps='git push $argv'
-  git push $argv
+function gup --wraps 'git push' --description 'git push'
+    git push $argv
 end
-

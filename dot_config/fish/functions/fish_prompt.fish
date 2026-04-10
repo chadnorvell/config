@@ -5,7 +5,7 @@ function _prompt_timestamp
 end
 
 function _prompt_hostname
-    if test -z "$TMUX" 
+    if test -z "$TMUX"
         string join '' -- (set_color -o bryellow) (prompt_hostname) (set_color normal) ' '
     end
 end

@@ -1,4 +1,3 @@
-function rrm --wraps 'rm'
-  command rm $argv
+function rrm --wraps rm --description rm
+    command rm $argv
 end
-

@@ -1,4 +1,3 @@
-function gpu --wraps='git pull $argv'
-  git pull $argv
+function gpu --wraps 'git pull' --description 'git pull'
+    git pull $argv
 end
-

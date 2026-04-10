@@ -1,3 +1,3 @@
-function gg --wraps='git clone $argv'
-  git clone $argv
+function gg --wraps 'git clone' --description 'git clone'
+    git clone $argv
 end

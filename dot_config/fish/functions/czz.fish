@@ -1,3 +1,3 @@
-function czz --wraps='chezmoi apply' --description 'alias czz chezmoi apply'
+function czz --wraps 'chezmoi apply' --description 'chezmoi apply'
     chezmoi apply $argv
 end

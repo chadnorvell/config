@@ -1,4 +1,3 @@
-function gaca! --wraps='git add -A && git commit --amend --no-edit'
-  git add -A && git commit --amend --no-edit
+function gaca! --description 'git add -A && git commit --amend --no-edit'
+    git add -A && git commit --amend --no-edit
 end
-
