@@ -36,9 +36,7 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
-      if vim.g.neovide then
-        load_gruvbox_dark()
-      end
+      load_nordic()
     end,
     keys = {
       {
@@ -52,11 +50,6 @@ return {
     "neanias/everforest-nvim",
     lazy = false,
     priority = 1000,
-    config = function()
-      if not vim.g.neovide then
-        load_everforest_dark()
-      end
-    end,
     keys = {
       {
         "<leader>uce",
