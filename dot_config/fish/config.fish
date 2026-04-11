@@ -44,6 +44,10 @@ if not set -q IN_NIX_SHELL
         fish_add_path -Pm "$HOME/.local/bin"
     end
 
+    if type -q zoxide
+        zoxide init fish | source
+    end
+
     if type -q direnv
         direnv hook fish | source
     end
