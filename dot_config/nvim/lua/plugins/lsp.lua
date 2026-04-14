@@ -82,9 +82,6 @@ return {
             offsetEncoding = { "utf-16" },
           },
         },
-        elixirls = {
-          cmd = { "./.nix/elixir-ls" },
-        },
         emmet_language_server = {
           filetypes = {
             "css",
@@ -109,6 +106,7 @@ return {
             })
           end,
         },
+        expert = {},
         fish_lsp = {},
         gopls = {},
         lua_ls = {},

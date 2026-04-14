@@ -1,9 +1,13 @@
-function v --description 'list dir or display file'
-    if test -d $argv[1]
-        eza --long $argv[1]
-    else if test -f $argv[1]
-        bat $argv[1]
+function v --description "bat file or eza directory"
+    set -l args $argv .
+    set -l p $args[1]
+
+    if test -d $p
+        eza --long $p
+    else if test -f $p
+        bat $p
     else
-        echo "Error: Path '$argv[1]' is neither a directory nor a file."
+        echo "Error: '$p' is neither a directory nor a file"
+        return 1
     end
 end

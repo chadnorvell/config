@@ -1,3 +1,3 @@
-function mkcd --description 'mkdir and cd into it'
-    mkdir $argv && cd $argv
+function mkcd --description "mkdir && cd" --wraps "mkdir"
+    mkdir $argv && cd $argv[-1]
 end

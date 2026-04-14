@@ -35,32 +35,6 @@ vim.opt.smarttab = true
 vim.opt.tabstop = 6
 vim.opt.softtabstop = 0
 
--- Overrides for 2-space tab stop file formats
-vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
-  pattern = {
-    "*.css",
-    "*.ex",
-    "*.exs",
-    "*.nix",
-    "*.rb",
-
-    "*.js",
-    "*.cjs",
-    "*.mjs",
-    "*.jsx",
-    "*.ts",
-    "*.cts",
-    "*.mts",
-    "*.tsx",
-    "*.json",
-    "*.jsonc",
-  },
-  callback = function()
-    vim.opt_local.shiftwidth = 2
-    vim.opt_local.tabstop = 3
-  end,
-})
-
 -- Share the system clipboard
 -- Loaded async because otherwise it can increase startup time
 vim.schedule(function()

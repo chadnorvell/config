@@ -9,6 +9,12 @@ return {
       { "<leader>g", group = "git" },
       { "<leader>s", group = "search" },
       { "<leader>t", group = "tabs" },
+
+      { "<leader>h", group = "health" },
+      { "<leader>hh", "<cmd>checkhealth vim.health<cr>", desc = "vim" },
+      { "<leader>hl", "<cmd>checkhealth vim.lsp<cr>", desc = "lsp" },
+      { "<leader>ht", "<cmd>checkhealth vim.treesitter<cr>", desc = "treesitter" },
+
       { "<leader>x", group = "diagnostics" },
       {
         "<leader>xl",

@@ -1,3 +1,4 @@
-function cdla --description 'cd && eza --long --all'
-    cd $argv && eza --long --all
+function cdla --description "cd && eza --long --all" --wraps cd
+    cd $argv && eza -la
 end
+
