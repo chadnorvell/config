@@ -39,6 +39,12 @@ abbr -a gxs git stash show
 abbr -a gy git cherry-pick
 abbr -a gya git cherry-pick --abort
 abbr -a gyc git cherry-pick --continue
+abbr -a jb jj bookmark
+abbr -a jc jj commit
+abbr -a jd jj describe
+abbr -a jg jj git
+abbr -a jgf jj git fetch
+abbr -a jgp jj git push
 abbr -a la eza -la
 abbr -a lg eza -l --git --git-ignore
 abbr -a lga eza -l --git
