@@ -4,7 +4,7 @@ return {
     session_lens = {
       load_on_setup = false,
     },
-    auto_session_suppress_dirs = { "/", "~/", "~/dev" },
+    suppressed_dirs = { "/", "~/", "~/dev" },
   },
   keys = {
     { "<leader>ad", "<cmd>AutoSession disable<cr>", desc = "disable" },
